@@ -12,7 +12,7 @@ class AppHeader extends HTMLElement {
 
     render() {
         this.shadowDOM.innerHTML = `
-        <Style>
+        <style>
             * {
                 margin: 0;
                 padding: 0;
