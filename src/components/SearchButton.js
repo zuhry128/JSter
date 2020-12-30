@@ -1,5 +1,4 @@
 class SearchButton extends HTMLElement {
-
     constructor() {
         super();
         this.shadowDOM = this.attachShadow({
@@ -17,7 +16,7 @@ class SearchButton extends HTMLElement {
     }
 
     get value() {
-        return this.querySelector("#searchButton").value;
+        return this.shadowDOM.querySelector("#SearchButton").value;
     }
 
     render() {
