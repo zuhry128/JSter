@@ -16,13 +16,17 @@ class SearchButton extends HTMLElement {
     }
 
     get value() {
-        return this.shadowDOM.querySelector("#SearchButton").value;
+        if(document.querySelector("#SearchButton") != null) {
+            return this.shadowDOM.querySelector("#SearchButton").value;
+        } else {
+            console.log("Null");
+        }
     }
 
     render() {
         this.shadowDOM.innerHTML = `
-        <style>
-             .search-container {
+               <style>
+        .search-container {
             max-width: 800px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             padding: 16px;

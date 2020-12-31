@@ -5,8 +5,8 @@ class CLubList extends HTMLElement {
         this.shadowDOM = this.attachShadow({ mode: "open" });
     }
 
-    set _SideArms(sidearm) {
-        this._SideArms = sidearm;
+    set _sidearms(sidearm) {
+        this._sidearms = sidearm;
         this.render();
     }
 
@@ -29,10 +29,10 @@ class CLubList extends HTMLElement {
 
     render() {
         this.shadowDOM.innerHTML = "";
-        this._SideArms.forEach(sidearm => {
-            const clubItemElement = document.querySelector("sidearm-item");
-            clubItemElement.sidearm = sidearm
-            this.shadowDOM.appendChild(clubItemElement);
+        this._sidearms.forEach(sidearm => {
+            const armItemElement = document.querySelector("sidearm-item");
+            armItemElement.sidearm = sidearm
+            this.shadowDOM.appendChild(armItemElement);
         });
     }
 }

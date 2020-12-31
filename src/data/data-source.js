@@ -1,11 +1,11 @@
-import SideArms from './sidearms.js';
+import sidearms from './sidearms.js';
 
 class DataSource {
-    static SearchArm(keyword) {
+    static searchArm(keyword) {
         return new Promise((resolve, reject) => {
-            const filtered = Sidearms.filter(sidearm => sidearm.name.toUpperCase().includes(keyword.toUpperCase()));
+            const filteredArms = sidearms.filter(sidearm => sidearm.name.toUpperCase().includes(keyword.toUpperCase()));
             if (filtered.length) {
-                resolve(filtered);
+                resolve(filteredArms);
             } else {
                 reject(`${keyword} not found !`);
             }

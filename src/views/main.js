@@ -4,20 +4,20 @@ import '../components/ClubList.js';
 
 const main = () => {
     const searchElement = document.querySelector("search-button");
-    const clubListElement = document.querySelector("side-list");
+    const armListElement = document.querySelector("side-list");
 
     const onButtonSearchClicked = () => {
-        DataSource.SearchArm(searchElement.value)
+        DataSource.searchArm(searchElement.value)
             .then(renderResult)
             .catch(fallbackResult)
     };
 
     const renderResult = results => {
-        clubListElement.clubs = results;
+        armListElement.sidearms = results;
     };
 
     const fallbackResult = (message) => {
-        clubListElement.renderError(message);
+        armListElement.renderError(message);
     };
 
     searchElement.clickEvent = onButtonSearchClicked;

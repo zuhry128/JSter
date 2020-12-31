@@ -1,4 +1,4 @@
-const SideArms = [
+const sidearms = [
     {
         name: "Baretta 9mm",
         cartridge: "9mm",
@@ -31,4 +31,4 @@ const SideArms = [
     }
 ];
 
-export default SideArms;
+export default sidearms;

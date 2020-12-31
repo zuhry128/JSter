@@ -4,8 +4,8 @@ class ClubItem extends HTMLElement {
         this.shadowDOM = this.attachShadow({ mode: "open" });
     }
 
-    set club(club) {
-        this._club = club;
+    set arm(arm) {
+        this._arm = arm;
         this.render();
     }
 
@@ -49,10 +49,10 @@ class ClubItem extends HTMLElement {
             -webkit-line-clamp: 10; /* number of lines to show */
         }
         </style>
-       <img class="fan-art-club" src="${this._club.fanArt}" alt="Fan Art">
+       <img class="fan-art-club" src="${this._arm.fanArt}" alt="Fan Art">
        <div class="club-info">
-           <h2>${this._club.name}</h2>
-           <p>${this._club.description}</p>
+           <h2>${this._arm.name}</h2>
+           <p>${this._arm.description}</p>
        </div>`;
     }
 }
