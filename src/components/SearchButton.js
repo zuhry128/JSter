@@ -6,7 +6,7 @@ class SearchButton extends HTMLElement {
         });
     }
 
-    connnectedCallback() {
+    connectedCallback() {
         this.render();
     }
 
@@ -22,7 +22,7 @@ class SearchButton extends HTMLElement {
     render() {
         this.shadowDOM.innerHTML = `
         <style>
-         .search-container {
+             .search-container {
             max-width: 800px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             padding: 16px;
@@ -88,9 +88,8 @@ class SearchButton extends HTMLElement {
         </div>
         `;
 
-        this.shadowDOM.querySelector("#searchButton").addEventListener("click", this._clickevent);
+        this.shadowDOM.querySelector("#searchButton").addEventListener("click", this._clickEvent);
     }
-
 }
 
 customElements.define("search-button", SearchButton);
